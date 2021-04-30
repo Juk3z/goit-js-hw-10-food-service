@@ -22,6 +22,7 @@ module.exports = env => ({
   },
   module: {
     rules: [
+      { test: /\.handlebars$/, loader: "handlebars-loader" },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],

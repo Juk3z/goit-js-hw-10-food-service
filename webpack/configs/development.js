@@ -8,6 +8,7 @@ module.exports = env => ({
   },
   module: {
     rules: [
+      { test: /\.handlebars$/, loader: "handlebars-loader" },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],

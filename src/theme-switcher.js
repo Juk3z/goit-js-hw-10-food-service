@@ -7,6 +7,11 @@ const Theme = {
 };
 
 // localStorage tester
+if (!localStorage.getItem('Theme')) {
+    bodyEl.classList.add('light-theme');
+    localStorage.setItem('Theme', Theme.LIGHT);
+};
+
 if (localStorage.getItem('Theme') === Theme.DARK) {
     bodyEl.classList.add('dark-theme');
     bodyEl.classList.remove('light-theme');
@@ -18,6 +23,8 @@ if (localStorage.getItem('Theme') === Theme.LIGHT) {
     bodyEl.classList.remove('dark-theme');
     inputSwitcherEl.checked = false;
 };
+
+
 
 
 // theme switcher function
